@@ -9,6 +9,7 @@
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
+    "compile-sass": "sass --watch /public/sass/style.scss:/public/stylesheets/style.css",
     "deploy": "script/deploy",
     "lint": "eslint ./ --ignore-path .gitignore",
     "prepush": "npm run lint && npm test",
@@ -24,6 +25,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "body-parser": "^1.16.1",
+    "bootstrap": "^4.1.0",
     "compression": "^1.7.1",
     "express": "^4.14.1",
     "history": "^4.6.3",
@@ -50,6 +52,7 @@
     "babel-eslint": "^8.0.1",
     "babel-loader": "^8.0.0-beta.2",
     "chai": "^3.5.0",
+    "css-loader": "^0.28.11",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "^1.0.0",
     "eslint": "^4.10.0",
@@ -57,10 +60,13 @@
     "eslint-plugin-react": "^7.4.0",
     "husky": "^0.14.3",
     "mocha": "^3.3.0",
+    "node-sass": "^4.8.3",
     "nodemon": "^1.12.1",
     "react-test-renderer": "^16.0.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-mock-store": "^1.2.3",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.20.3",
     "supertest": "^3.0.0",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.9"
