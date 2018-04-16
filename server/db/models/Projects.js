@@ -2,14 +2,26 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
 const Projects = new Schema({
-  name: {
+  title: {
+    type: String
+  },
+  description: {
     type: String
   },
   author: {
     type: String
   },
-  date: {
+  industry: {
     type: String
+  },
+  position: {
+    type: String
+  },
+  location: {
+    type: String
+  },
+  date: {
+    type: Date
   }
 });
 

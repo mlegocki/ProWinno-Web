@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Route, Switch } from 'react-router-dom'
 import { HomePage } from './components'
+import { loadProjects } from './store'
 
 class Routes extends Component {
   componentDidMount() {
+    this.props.loadInitialData()
   }
 
   render() {
@@ -24,6 +26,9 @@ const mapState = (state) => {
 
 const mapDispatch = (dispatch) => {
   return {
+    loadInitialData() {
+      dispatch(loadProjects())
+    }
   }
 }
 
