@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-router.use('/projects', require('./projects'))
+router.use('/postings', require('./postings'))
 
 router.use((req, res, next) => {
   const error = new Error('Not Found')

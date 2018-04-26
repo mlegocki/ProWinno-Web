@@ -1,0 +1,7 @@
+@import './siteColors';
+@import '../containers/Home/homePage';
+
+a, a:hover, a:visited, a:active { 
+  color: $black;
+  text-decoration: $noDecor;
+}

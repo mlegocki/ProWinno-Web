@@ -1,0 +1,12 @@
+.HomePage-master-container {
+  display: grid;
+  grid-template-columns: 2fr 6fr 2fr;
+  grid-template-rows: 1fr;
+}
+
+.PostingRow-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 20px;
+  border: 1px black solid;
+}
