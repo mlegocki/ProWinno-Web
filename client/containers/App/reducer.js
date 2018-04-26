@@ -4,6 +4,9 @@ import {
   POSTINGS_FETCH_SUCCESS,
 } from './constants'
 
+const initialState = {
+  postings: []
+}
 
 export default function (state = {}, action) {
   switch (action.type) {

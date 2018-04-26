@@ -23,7 +23,7 @@ export const fetchPostings = (searchTerm = '') =>
       })
       .catch(error => {
         dispatch(postingsRequestFailure(error))
-        console.log(err)
+        console.log(error)
       })
   }
 

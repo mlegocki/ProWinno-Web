@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchSinglePosting } from './actions'
+import { fetchPostings } from '../App/actions'
 
-class Posting extends Component {
+class Postings extends Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    const { postingId } = this.props.match.params
-    this.requestSinglePostingData(postingId)
+    console.log(this.props.match.params)
   }
 
-  requestSinglePostingData(postingId) {
-    const { fetchSinglePosting } = this.props;
-    fetchSinglePosting(postingId)
+  requestData(searchTerm) {
+    const { fetchPostings } = this.props;
+    fetchPostings(postingId)
   }
 
   render() {
@@ -45,7 +44,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-  fetchSinglePosting
+  fetchPostings
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posting);
