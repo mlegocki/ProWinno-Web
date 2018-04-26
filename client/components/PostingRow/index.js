@@ -2,12 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const PostingRow = (props) => {
-  const { posting, updateCurrentPosting } = props;
+  const { posting } = props;
   return (
     <NavLink to={`/postings/${posting._id}`} >
-      <div className='PostingRow-container'
-        onClick={() => updateCurrentPosting(posting._id)}
-      >
+      <div className='PostingRow-container'>
         <div className='PostingRow-header'>{posting.title}</div>
         <div className='PostingRow-header'>{posting.author}</div>
         <div className='PostingRow-header'>{posting.location}</div>

@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const ObjectId = require('mongoose').Types.ObjectId;
+
 const { Postings } = require('../db/models')
 
 // returns all documents (array form)
@@ -19,10 +21,10 @@ router.get('/', (req, res, next) => {
 
 // returns a single document (object form)
 router.get('/:postingId', (req, res, next) => {
-  let postingId = req.params.postingId;
-  Postings.findById(postingId, (err, posting) => {
-    res.send(posting)
-  })
+  const { postingId } = req.params
+  Postings.findById(postingId, (error, posting) =>
+    res.send(posting))
+    .catch(next);
 })
 
 // returns the newly created document (object form)

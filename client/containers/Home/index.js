@@ -3,9 +3,19 @@ import { connect } from 'react-redux';
 
 import PostingRow from '../../components/PostingRow';
 
+import { fetchPostings } from '../App/actions'
+
 class Home extends Component {
   constructor(props) {
     super(props);
+  }
+  componentDidMount() {
+    this.requestData();
+  }
+
+  requestData() {
+    const { fetchPostings } = this.props;
+    fetchPostings()
   }
   render() {
     const { postings } = this.props;
@@ -36,6 +46,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
+  fetchPostings
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
